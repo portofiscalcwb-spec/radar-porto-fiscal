@@ -1,3 +1,4 @@
+import { LOGO } from "../lib/paths";
 import { useEffect, useState } from "react";
 
 export default function SplashScreen() {
@@ -13,7 +14,7 @@ export default function SplashScreen() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center elegant-gradient animate-fade-out">
       <div className="text-center space-y-6 animate-pulse">
-        <img src="/porto-fiscal-logo.png" alt="Porto Fiscal" className="h-32 w-auto mx-auto drop-shadow-2xl" />
+        <img src={LOGO} alt="Porto Fiscal" className="h-32 w-auto mx-auto drop-shadow-2xl" />
         <div className="space-y-2">
           <h1 className="text-4xl font-bold text-foreground">Radar Porto Fiscal</h1>
           <p className="text-muted-foreground text-lg">Carregando...</p>

@@ -1,3 +1,4 @@
+import { LOGO } from "../lib/paths";
 import { useRef, useState, type ChangeEvent } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
@@ -127,7 +128,7 @@ export default function Home() {
     <div className="min-h-screen elegant-gradient">
       <div className="mx-auto max-w-7xl px-4 py-8">
         <div className="mb-8 text-center">
-          <img src="/porto-fiscal-logo.png" alt="Porto Fiscal" className="h-20 w-auto mx-auto mb-4" />
+          <img src={LOGO} alt="Porto Fiscal" className="h-20 w-auto mx-auto mb-4" />
           <h1 className="text-4xl font-bold text-foreground mb-2">Radar Porto Fiscal</h1>
           <p className="text-muted-foreground">Consulte dados empresariais de forma rápida e confiável</p>
           <div className="mt-4 flex flex-wrap gap-2 justify-center">

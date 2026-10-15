@@ -1,3 +1,4 @@
+import { LOGO } from "../lib/paths";
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
@@ -54,7 +55,7 @@ export default function History() {
               <p className="text-muted-foreground">Visualize e gerencie suas consultas anteriores</p>
               <Link href="/cache"><Button variant="outline" className="mt-3"><Database className="h-4 w-4" />Gerenciar Cache</Button></Link>
             </div>
-            <img src="/porto-fiscal-logo.png" alt="Porto Fiscal" className="h-16 w-auto hidden sm:block" />
+            <img src={LOGO} alt="Porto Fiscal" className="h-16 w-auto hidden sm:block" />
           </div>
         </div>
 

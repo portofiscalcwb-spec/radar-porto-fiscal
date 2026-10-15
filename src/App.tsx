@@ -1,4 +1,5 @@
-import { Route, Switch } from "wouter";
+import { Route, Router, Switch } from "wouter";
+import { ROUTER_BASE } from "./lib/paths";
 import { Toaster } from "sonner";
 import SplashScreen from "./components/SplashScreen";
 import Home from "./pages/Home";
@@ -11,12 +12,14 @@ export default function App() {
     <>
       <SplashScreen />
       <Toaster richColors position="top-right" />
+      <Router base={ROUTER_BASE}>
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/historico" component={History} />
         <Route path="/cache" component={CacheManagement} />
         <Route component={NotFound} />
       </Switch>
+      </Router>
     </>
   );
 }
