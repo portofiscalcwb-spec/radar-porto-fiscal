@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Paleta copiada do app original (Manus) */
+:root {
+  --radius: 0.65rem;
+  --background: oklch(100% 0 0);
+  --foreground: oklch(25% 0.01 250);
+  --card: oklch(100% 0 0);
+  --primary: oklch(35% 0.12 250);
+  --primary-foreground: oklch(98% 0.01 250);
+  --secondary: oklch(60% 0.18 240);
+  --secondary-foreground: oklch(98% 0.01 240);
+  --muted: oklch(96% 0.005 250);
+  --muted-foreground: oklch(55% 0.01 250);
+  --accent: oklch(65% 0.15 190);
+  --accent-foreground: oklch(98% 0.01 190);
+  --destructive: oklch(57.7% 0.245 27.325);
+  --border: oklch(90% 0.005 250);
+  --ring: oklch(65% 0.15 190);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.elegant-gradient { background: linear-gradient(135deg, #f7fdff, #e8f3ff); }
+.glass-card {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: #ffffffb3;
+  border: 1px solid oklch(100% 0 0 / 0.3);
+}
+
+@keyframes fade-out { 0%, 80% { opacity: 1; } 100% { opacity: 0; } }
+.animate-fade-out { animation: fade-out 2s ease-in-out forwards; }
